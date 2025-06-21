@@ -5,6 +5,7 @@ import Sidebar from './Sidebar';
 import EventRequests from './EventRequests';
 import EventDetails from './EventDetails';
 import './EventDashboard.css';
+import './Responsive.css';
 
 const EventDashboard = () => {
   const [currentView, setCurrentView] = useState('event-requests');

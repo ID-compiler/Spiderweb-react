@@ -1,0 +1,262 @@
+/* Responsive.css */
+
+/* ========== MOBILE STYLES ========== */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    z-index: 1000;
+    height: 100vh;
+    background-color: #1B0033;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .event-requests .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .search-container,
+  .search-input {
+    width: 100%;
+  }
+
+  .events-table {
+    font-size: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .events-table th,
+  .events-table td {
+    padding: 0.5rem;
+    min-width: 100px;
+  }
+
+  .event-details .tabs {
+    flex-wrap: wrap;
+    overflow-x: auto;
+    gap: 0.5rem;
+  }
+
+  .tab {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .coordinator-section,
+  .event-info-section,
+  .assign-coordinator,
+  .contractor-layout {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .meeting-rooms {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .positions-table {
+    overflow-x: auto;
+  }
+
+  .positions-table table {
+    min-width: 600px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* ========== TABLET STYLES ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+    padding: 1.5rem;
+  }
+
+  .events-table {
+    font-size: 14px;
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 0.5rem 1.25rem;
+  }
+
+  .meeting-rooms {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========== DESKTOP ========== */
+@media (min-width: 1025px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .main-content {
+    margin-left: 80px;
+    padding: 2rem;
+  }
+
+  .meeting-rooms {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* ========== UTILITY ========== */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.responsive-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 320px) {
+  .venue,
+  .contact-info {
+    display: none;
+  }
+}
+/* === Ultra-Small Devices (<500px) === */
+@media (max-width: 499px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: #1B0033;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .main-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-container,
+  .search-input {
+    width: 100%;
+  }
+
+  .table-container,
+  .events-table,
+  .positions-table table {
+    overflow-x: auto;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .tab {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .assign-coordinator,
+  .contractor-layout {
+    flex-direction: column;
+  }
+
+  .meeting-rooms {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .save-btn,
+  .add-btn {
+    width: 100%;
+  }
+
+  .event-row {
+    display: block;
+    border-bottom: 1px solid #3F0070;
+    padding: 0.5rem 0;
+  }
+
+  .event-row td {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 0;
+  }
+
+  .venue,
+  .contact-info {
+    display: none;
+  }
+
+  .menu-item {
+    min-height: 44px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .tab-content {
+    padding: 0.5rem;
+  }
+}
