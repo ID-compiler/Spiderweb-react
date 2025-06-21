@@ -1,4 +1,3 @@
-
 import { Users, Calendar, MapPin, User, Settings, LogOut } from 'lucide-react';
 
 interface SidebarProps {
@@ -38,7 +37,7 @@ const Sidebar = ({ currentView, setCurrentView }: SidebarProps) => {
             {menuItems.slice(0, 4).map((item) => (
               <div 
                 key={item.id} 
-                className={`menu-item ${item.active ? 'active' : ''}`}
+                className={`menu-item hover-glow ${item.active ? 'active' : ''}`}
                 onClick={() => setCurrentView(item.id)}
               >
                 <item.icon className="menu-icon" size={16} />
@@ -53,7 +52,7 @@ const Sidebar = ({ currentView, setCurrentView }: SidebarProps) => {
           {menuItems.slice(4, 6).map((item) => (
             <div 
               key={item.id} 
-              className="menu-item"
+              className="menu-item hover-glow"
               onClick={() => setCurrentView(item.id)}
             >
               <item.icon className="menu-icon" size={16} />
@@ -63,7 +62,7 @@ const Sidebar = ({ currentView, setCurrentView }: SidebarProps) => {
         </div>
 
         <div className="menu-section">
-          <div className="menu-item expandable">
+          <div className="menu-item expandable hover-glow">
             <Users className="menu-icon" size={16} />
             <span>Users</span>
             <div className="expand-icon">^</div>
@@ -82,7 +81,7 @@ const Sidebar = ({ currentView, setCurrentView }: SidebarProps) => {
           </div>
         </div>
 
-        <div className="menu-item">
+        <div className="menu-item hover-glow">
           <Settings className="menu-icon" size={16} />
           <span>Profile</span>
         </div>

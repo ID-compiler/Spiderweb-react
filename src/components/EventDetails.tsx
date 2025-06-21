@@ -38,12 +38,12 @@ const EventDetails = ({ event, onBack }: EventDetailsProps) => {
   ];
 
   return (
-    <div className="event-details">
-      <div className="event-header">
+    <div className="event-details ">
+      <div className="event-header ">
         <button className="back-btn" onClick={onBack}>
           <ArrowLeft size={20} />
         </button>
-        <h1>Event Name <span className="venue-details">(Venue Details)</span></h1>
+        <h1 className=' hover-glow '>Event Name <span className="venue-details">(Venue Details)</span></h1>
       </div>
 
       <div className="tabs">
@@ -58,13 +58,13 @@ const EventDetails = ({ event, onBack }: EventDetailsProps) => {
         ))}
       </div>
 
-      <div className="tab-content">
+      <div className="tab-content ">
         {activeTab === 'assign-coordinator' && (
           <div className="assign-coordinator">
-            <div className="coordinator-section">
+            <div className=" coordinator-section">
               <h3>Assign Coordinator</h3>
               <select 
-                className="coordinator-select"
+                className="coordinator-select  hover-glow"
                 value={selectedCoordinator}
                 onChange={(e) => setSelectedCoordinator(e.target.value)}
               >
@@ -79,18 +79,18 @@ const EventDetails = ({ event, onBack }: EventDetailsProps) => {
               <div className="event-name-input">
                 <label>Event Name (Venue Here)</label>
                 <div className="input-group">
-                  <input
+                  <input className='hover-glow'
                     type="text"
                     value={eventName}
                     onChange={(e) => setEventName(e.target.value)}
                   />
-                  <span className="date-range">Start 12-12-2023</span>
-                  <span className="end-date">Ends 15-12-2023</span>
+                  <span className="hover-glow date-range">Start 12-12-2023</span>
+                  <span className="hover-glow end-date">Ends 15-12-2023</span>
                 </div>
               </div>
-              <div className="venue-address">
+              <div className="venue-address ">
                 <label>Venue Address</label>
-                <input
+                <input className=' hover-glow'
                   type="text"
                   value={venueAddress}
                   onChange={(e) => setVenueAddress(e.target.value)}
@@ -101,9 +101,9 @@ const EventDetails = ({ event, onBack }: EventDetailsProps) => {
             <div className="assign-contractor">
               <h3>Assign Contractor</h3>
               <div className="contractor-layout">
-                <div className="meeting-rooms">
+                <div className="meeting-rooms ">
                   {meetingRooms.map((room, index) => (
-                    <div key={index} className={`meeting-room ${room.status}`}>
+                    <div key={index} className={`meeting-room  hover-glow ${room.status}`}>
                       <div className="room-header">
                         <h4>{room.name}</h4>
                         <span className="positions-count">
@@ -119,9 +119,9 @@ const EventDetails = ({ event, onBack }: EventDetailsProps) => {
                   ))}
                 </div>
 
-                <div className="positions-table">
+                <div className=" positions-table">
                   <h4>Positions</h4>
-                  <table>
+                  <table className=' hover-glow '>
                     <thead>
                       <tr>
                         <th>Position</th>
@@ -162,7 +162,7 @@ const EventDetails = ({ event, onBack }: EventDetailsProps) => {
               </div>
             </div>
 
-            <button className="save-btn">Save Edits</button>
+            <button className="hover-glow save-btn">Save Edits</button>
           </div>
         )}
       </div>

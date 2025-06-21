@@ -34,7 +34,7 @@ const EventRequests = ({ onEventSelect }: EventRequestsProps) => {
       <div className="header">
         <h1>Event Requests</h1>
         <div className="header-actions">
-          <div className="search-container">
+          <div className="search-container hover-glow">
             <Search className="search-icon" size={20} />
             <input
               type="text"
@@ -44,51 +44,51 @@ const EventRequests = ({ onEventSelect }: EventRequestsProps) => {
               className="search-input"
             />
           </div>
-          <button className="add-btn">
+          <button className="add-btn hover-glow">
             <Plus size={20} />
           </button>
         </div>
       </div>
 
       <div className="table-container">
-        <table className="events-table">
+        <table className="events-table ">
           <thead>
             <tr>
-              <th>Event Name 📋</th>
-              <th>Event Start</th>
-              <th>Event End 📅</th>
-              <th>Client Name 👤</th>
-              <th>Contact Info</th>
-              <th>Venue</th>
+              <th className='hover-glow'>Event Name 📋</th>
+              <th className='hover-glow'>Event Start</th>
+              <th className='hover-glow'>Event End 📅</th>
+              <th className='hover-glow'>Client Name 👤</th>
+              <th className='hover-glow'>Contact Info</th>
+              <th className='hover-glow'>Venue</th>
             </tr>
           </thead>
           <tbody>
             {filteredEvents.map((event) => (
               <tr key={event.id} onClick={() => handleEventClick(event)} className="event-row">
-                <td>
+                <td className='hover-glow'>
                   <div className="event-name">
                     <Eye className="view-icon" size={16} />
                     {event.eventName}
                   </div>
                 </td>
-                <td>{event.eventStart}</td>
-                <td>{event.eventEnd}</td>
-                <td>{event.clientName}</td>
-                <td>{event.contactInfo}</td>
-                <td>{event.venue}</td>
+                <td className='hover-glow'>{event.eventStart}</td>
+                <td className='hover-glow'>{event.eventEnd}</td>
+                <td className='hover-glow'>{event.clientName}</td>
+                <td className='hover-glow'>{event.contactInfo}</td>
+                <td className='hover-glow'>{event.venue}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      <div className="pagination">
-        <button className="pagination-btn">←</button>
-        <div className="page-numbers">
-          <span className="page-number active">1</span>
-          <span className="page-number">2</span>
-          <span className="page-number">3</span>
-          <span className="page-number">4</span>
+      <div className="pagination ">
+        <button className="pagination-btn hover-glow">←</button>
+        <div className="page-numbers ">
+          <span className="page-number active hover-glow">1</span>
+          <span className="page-number hover-glow">2</span>
+          <span className="page-number hover-glow">3</span>
+          <span className="page-number hover-glow">4</span>
         </div>
       </div>
     </div>

@@ -802,3 +802,13 @@
     text-align: center;
   }
 }
+
+
+.hover-glow {
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.hover-glow:hover {
+  border: 1px solid #ff4ecd;
+  box-shadow: 0 0 12px #ff4ecd, 0 0 20px #ff4ecd66;
+}
