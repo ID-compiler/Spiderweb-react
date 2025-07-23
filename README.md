@@ -5,7 +5,7 @@ This project is a modern, glowing dashboard built using **React** and **Tailwind
 ##  Features
 
 -  **Animated gradient background** for a modern glowing look
-- 📋 **Event Requests Page** with:
+-  **Event Requests Page** with:
   - Searchable event list
   - Responsive card layout
   - Styled buttons
@@ -18,7 +18,7 @@ This project is a modern, glowing dashboard built using **React** and **Tailwind
 
 ##  Tech Stack
 
-- ⚛React (with Vite)
+- React (with Vite)
 - Tailwind CSS
 -  React Router DOM
 -  vite
